@@ -1,0 +1,4 @@
+/node_modules
+git remote add origin git@github.com:juri4221/course.git
+git branch -M master
+git push -u origin master
