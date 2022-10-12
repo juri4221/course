@@ -1,4 +1,4 @@
-import {useEffect, useReducer, useState} from "react";
+import { useReducer} from "react";
 
 import CartContext from "./cart-conetxt";
 
@@ -15,13 +15,12 @@ const cartReducer = (state, action) => {
             items: updatedItems,
             totalAmount: updatedTotalAmount
         };
-    };
+    }
     return defaultCartState;
 }
 
 const CartProvider = props => {
-    const [cartState, dispatchCartAction] = useReducer(cartReducer, defaultCartState);
-
+    const [cartState, dispatchCartAction] = useReducer(cartReducer, defaultCartState );
     const addItemToCartHandler = (item) => {
         dispatchCartAction({type: 'ADD', item: item});
     };
@@ -30,24 +29,12 @@ const CartProvider = props => {
         dispatchCartAction({type:'REMOVE', id: id});
     };
 
-    const[cartContext, setCartContext] = useState()
-
-    useEffect(()=> {
-        if(!cartContext && cartState.items.length > 0 ){
-            setCartContext({
-                items: cartState.items,
-                totalAmount: cartState.totalAmount,
-                addItem: addItemToCartHandler,
-                removeItem: removeItemFromCartHandler
-
-            })
-            console.log('cartState===============',cartState,'cartContext===============', cartContext)
-
-        }
-
-
-    },[cartContext, cartState])
-
+    const cartContext = {
+        items: cartState.items,
+        totalAmount: cartState.totalAmount,
+        addItem: addItemToCartHandler,
+        removeItem: removeItemFromCartHandler
+    }
 
     return(
     <CartContext.Provider value={cartContext}>
