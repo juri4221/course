@@ -1,16 +1,18 @@
 import Head from "next/head";
 import styles from "../styles/Login.module.css";
-import ActiveLink from "../components/ActiveLink";
+import Link from "next/link";
 
-export default function Home() {
+export default function Register() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Bootstrap App Home</title>
+        <title>Register</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <main className={styles.main}>
-        <ActiveLink href="/login"> Go to login? </ActiveLink>
+        <h1>Register</h1>
+        <Link href="/login"> Already have an account? Login here! </Link>
       </main>
     </div>
   );
