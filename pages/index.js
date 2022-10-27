@@ -11,6 +11,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <ActiveLink href="/login"> Go to login? </ActiveLink>
+        <ActiveLink href="/register"> Register? </ActiveLink>
       </main>
     </div>
   );
