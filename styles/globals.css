@@ -6,6 +6,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: white;
   background: black;
+  height: 100vh;
 }
 
 a {
@@ -15,4 +16,8 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+div#__next {
+  height: 100vh;
 }

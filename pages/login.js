@@ -28,7 +28,7 @@ export default function Login() {
 
       <main className={styles.main}>
         <h1>Login</h1>
-        <Link href="/"> Forgot your password? </Link>
+        <Link href="/forgetPassword"> Forgot your password? </Link>
         <div className={styles.form}>
           <div className={styles.inputWrapper}>
             <label>Email</label>
