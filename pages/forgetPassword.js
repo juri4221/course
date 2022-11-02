@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/ForgetPassword.module.css";
+import { Piece, PIECES } from "../components/pieces/piece";
 
 export default function ForgetPassword() {
   return (
@@ -10,15 +11,112 @@ export default function ForgetPassword() {
       </Head>
 
       <main className={styles.main}>
-        <div className={styles.div1}>
-          <div className={styles.div11}>Div 1.1</div>
-          <div className={styles.div12}>Div 1.2</div>
-          <div className={styles.div13}>Div 1.3</div>
-          <div className={styles.div14}>Div 1.4</div>
+        <div className={styles.column}>
+          <div className={styles.box}>
+            <svg
+              viewBox="0 0 740 740"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M391.284 165.6C390.618 166.533 389.018 171.2 387.684 176C386.484 180.8 384.884 185.6 384.218 186.667C383.418 188 379.418 188.8 371.284 189.467C357.818 190.4 356.218 191.067 338.351 203.867C322.351 215.2 304.351 224.667 296.218 226C286.618 227.467 274.351 234.933 271.018 241.2C268.751 245.333 267.418 263.333 269.284 264.533C270.084 265.067 274.484 264.533 279.151 263.467C283.818 262.4 287.684 261.733 287.951 262C288.218 262.133 283.951 264.667 278.618 267.6C268.351 273.2 266.218 276.4 270.218 280.533C271.951 282.267 275.151 282.667 285.684 282.667C300.351 282.667 309.018 280.267 316.351 274.133C320.351 270.8 320.884 270.667 339.018 270.667C355.018 270.667 358.351 270.267 363.418 267.867C366.618 266.4 370.351 264 371.684 262.533C375.418 258.4 376.218 259.467 376.218 268.533C376.218 275.733 375.418 278.533 371.551 286C365.151 298.4 357.418 308.933 341.551 326.667C316.884 354.4 308.618 365.733 300.884 383.333C293.151 400.8 290.218 419.733 293.684 428.8C294.351 430.933 298.618 436 303.018 440.133C307.284 444.4 310.884 448.933 310.884 450.267C310.884 451.6 307.018 457.733 302.218 463.733C297.418 469.733 293.551 475.6 293.551 476.667C293.551 481.067 289.284 486.8 283.818 489.467C280.751 491.067 274.884 495.867 270.751 500C257.284 513.867 251.684 530.933 257.418 540.667C258.884 543.333 260.218 546 260.218 546.533C260.218 547.2 257.951 549.2 255.018 551.067C246.884 556.533 247.018 565.2 255.284 568.667C275.018 576.933 445.151 578.267 480.218 570.533C487.951 568.8 490.884 566 490.884 560.4C490.884 556.8 489.951 555.333 485.551 552.267C479.684 548.267 479.151 546.133 482.618 542.267C486.218 538.133 485.551 525.067 481.284 516.667C475.818 506.133 468.351 497.733 458.218 490.933C450.484 485.6 448.751 483.733 447.418 479.067C446.484 476 442.084 468.8 437.684 463.067C433.151 457.2 429.551 451.6 429.551 450.267C429.551 446.8 436.751 439.467 447.018 432.4L456.484 426L455.684 419.733C455.018 415.467 455.684 410 457.684 402C460.218 391.867 460.351 389.467 459.018 381.333C456.484 365.467 457.018 358.533 462.218 345.2C466.618 333.867 466.884 332 466.884 317.733C466.884 304.267 467.418 301.067 471.018 289.867L475.284 277.333L469.818 263.467C466.751 255.733 463.018 243.333 461.551 235.867C459.951 228.267 458.484 221.733 458.084 221.2C457.818 220.667 451.018 215.733 443.151 210.133C432.884 202.933 428.084 198.667 426.484 195.333C424.484 191.067 423.818 190.667 418.351 190.667C408.218 190.667 406.484 189.333 399.684 176.133C396.218 169.467 393.284 164 393.018 164C392.751 164 391.951 164.8 391.284 165.6Z"
+                fill="green"
+              />
+            </svg>
+          </div>
+          <div className={styles.box}>
+            <svg
+              viewBox="0 0 740 740"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M391.284 165.6C390.618 166.533 389.018 171.2 387.684 176C386.484 180.8 384.884 185.6 384.218 186.667C383.418 188 379.418 188.8 371.284 189.467C357.818 190.4 356.218 191.067 338.351 203.867C322.351 215.2 304.351 224.667 296.218 226C286.618 227.467 274.351 234.933 271.018 241.2C268.751 245.333 267.418 263.333 269.284 264.533C270.084 265.067 274.484 264.533 279.151 263.467C283.818 262.4 287.684 261.733 287.951 262C288.218 262.133 283.951 264.667 278.618 267.6C268.351 273.2 266.218 276.4 270.218 280.533C271.951 282.267 275.151 282.667 285.684 282.667C300.351 282.667 309.018 280.267 316.351 274.133C320.351 270.8 320.884 270.667 339.018 270.667C355.018 270.667 358.351 270.267 363.418 267.867C366.618 266.4 370.351 264 371.684 262.533C375.418 258.4 376.218 259.467 376.218 268.533C376.218 275.733 375.418 278.533 371.551 286C365.151 298.4 357.418 308.933 341.551 326.667C316.884 354.4 308.618 365.733 300.884 383.333C293.151 400.8 290.218 419.733 293.684 428.8C294.351 430.933 298.618 436 303.018 440.133C307.284 444.4 310.884 448.933 310.884 450.267C310.884 451.6 307.018 457.733 302.218 463.733C297.418 469.733 293.551 475.6 293.551 476.667C293.551 481.067 289.284 486.8 283.818 489.467C280.751 491.067 274.884 495.867 270.751 500C257.284 513.867 251.684 530.933 257.418 540.667C258.884 543.333 260.218 546 260.218 546.533C260.218 547.2 257.951 549.2 255.018 551.067C246.884 556.533 247.018 565.2 255.284 568.667C275.018 576.933 445.151 578.267 480.218 570.533C487.951 568.8 490.884 566 490.884 560.4C490.884 556.8 489.951 555.333 485.551 552.267C479.684 548.267 479.151 546.133 482.618 542.267C486.218 538.133 485.551 525.067 481.284 516.667C475.818 506.133 468.351 497.733 458.218 490.933C450.484 485.6 448.751 483.733 447.418 479.067C446.484 476 442.084 468.8 437.684 463.067C433.151 457.2 429.551 451.6 429.551 450.267C429.551 446.8 436.751 439.467 447.018 432.4L456.484 426L455.684 419.733C455.018 415.467 455.684 410 457.684 402C460.218 391.867 460.351 389.467 459.018 381.333C456.484 365.467 457.018 358.533 462.218 345.2C466.618 333.867 466.884 332 466.884 317.733C466.884 304.267 467.418 301.067 471.018 289.867L475.284 277.333L469.818 263.467C466.751 255.733 463.018 243.333 461.551 235.867C459.951 228.267 458.484 221.733 458.084 221.2C457.818 220.667 451.018 215.733 443.151 210.133C432.884 202.933 428.084 198.667 426.484 195.333C424.484 191.067 423.818 190.667 418.351 190.667C408.218 190.667 406.484 189.333 399.684 176.133C396.218 169.467 393.284 164 393.018 164C392.751 164 391.951 164.8 391.284 165.6Z"
+                fill="green"
+              />
+            </svg>
+          </div>
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box}>
+            <Piece piece={PIECES.KING} />
+          </div>
+          <div className={styles.box}>
+            <Piece piece={PIECES.KING} />
+          </div>
         </div>
-        <div className={styles.div2}>Div 2</div>
-        <div className={styles.div3}>Div 3</div>
-        <div className={styles.div4}>Div 4</div>
+        <div className={styles.column}>
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+        </div>
+        <div className={styles.column}>
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+        </div>
+        <div className={styles.column}>
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+        </div>
+        <div className={styles.column}>
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+        </div>
+        <div className={styles.column}>
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+        </div>
+        <div className={styles.column}>
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+        </div>
+        <div className={styles.column}>
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+          <div className={styles.box} />
+        </div>
       </main>
     </div>
   );
